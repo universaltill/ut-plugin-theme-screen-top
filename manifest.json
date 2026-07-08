@@ -1,0 +1,28 @@
+{
+  "id": "com.universaltill.theme-screen-top",
+  "name": "Screen Top Theme",
+  "version": "1.0.1",
+  "description": "POS layout theme: the sale screen (basket) spans the top of the page with the product buttons underneath.",
+  "author": "Universal Till",
+  "website": "https://universaltill.com",
+  "canonical_type": "theme",
+  "runtime": "none",
+  "device_arch": "any",
+  "min_pos_version": "1.0.0",
+  "permissions": [
+    "ui.theme"
+  ],
+  "locales": [
+    "en-US"
+  ],
+  "entries": [
+    {
+      "type": "theme",
+      "key": "screen-top",
+      "label": "Screen Top",
+      "config": {
+        "css": "assets/theme.css"
+      }
+    }
+  ]
+}
