@@ -1,12 +1,15 @@
 /* Screen Top — the sale screen (basket) spans the TOP of the page; the
-   product buttons sit underneath, with journal and tender alongside them.
-   Panels are repositioned via the pos-container grid areas — no markup
-   changes. */
+   product buttons and tender sit underneath. Panels are repositioned via
+   the pos-container grid areas — no markup changes. Rows stay bounded
+   fractions of the fixed-height container so nothing moves when lines are
+   added; each panel scrolls internally. (The journal lives on its own
+   /journal page since POS v0.1 one-screen layout.) */
 .pos-container {
-  grid-template-columns: 1.4fr 0.8fr 0.8fr;
+  grid-template-columns: minmax(0, 1.6fr) minmax(330px, 1fr);
+  grid-template-rows: minmax(0, 1fr) minmax(0, 1.2fr);
   grid-template-areas:
-    "basket basket basket"
-    "products journal tender";
+    "basket basket"
+    "products tender";
 }
 
 /* The basket becomes the full-width headline screen. */
